@@ -35,7 +35,7 @@ try {
 				else{
 					odoo_version = baseURI.split('/');
 					if ((odoo_version.length > 5) && (all_odoo_versions.contains(odoo_version[5])) )
-						result = ["Demo is currently available for version 10.0 & 9.0 ONLY"];
+						result = ["Currently, Demo is available only for version 9.0 & 10.0"];
 					else
 						result = ["You need to go on product page in order to check demo."];
 				}
