@@ -4,7 +4,7 @@ chrome.tabs.executeScript( null, {file: "content_script.js"} );
 chrome.runtime.onMessage.addListener(function(result) {
   if (result.length>1)
       renderStatus(result[0], result[1], result[2]);
-  else {
+  else if (result.length==1){
         document.getElementById('custom_message').innerHTML = result[0];
         toggleMe('capture-menu1', 'none');
         toggleMe('capture-menu2', 'block');
