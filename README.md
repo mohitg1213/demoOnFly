@@ -14,4 +14,4 @@ STEPS FOR INSTALLATION:
 6) Hurray !!! Extension has been installed on your chrome. 
 
 [OR]
-1) Drag and drop the Demofly.CRX file onto the Chrome Extensions page(More Tools> Extensions) to install it.
+1) Drag and drop the Demofly.crx file onto the Chrome Extensions page(More Tools> Extensions) to install it.
