@@ -18,8 +18,21 @@ function toggleMe(element_id, value='none'){
 function renderStatus(demo_url, framework, module_title) {
 
       document.getElementById('10').href = demo_url;
+      document.getElementById('txt_copy').value = demo_url;
       document.getElementById('module_name').innerHTML = module_title;
       document.getElementById('odoo_version').innerHTML = framework;
       toggleMe('capture-menu', 'block');
       toggleMe('capture-menu1', 'none');
 }
+
+var copyTextareaBtn = document.querySelector('.js-textareacopybtn');
+copyTextareaBtn.addEventListener('click', function(event) {
+  document.getElementById("txt_copy").select();
+  try {
+    var successful = document.execCommand('copy');
+    var msg = successful ? 'successful' : 'unsuccessful';
+    self.close()
+  } catch (err) {
+    console.log('Oops, unable to copy');
+  }
+});
