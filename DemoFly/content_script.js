@@ -23,8 +23,13 @@ try {
 								module_name = baseURI.split('/')[6];
 								// module_title = document.querySelectorAll("h1[class='mt0 mb0']")[0].innerText;
 								module_title = document.title.split("|")[0];
-								if (author.startsWith("Webkul"))
-									demoUrl		= "http://odoodemo.webkul.com/?version="+odoo_version[5]+"&module="+module_name;
+								if (author.startsWith("Webkul")){
+									demo_url = document.querySelectorAll("a[class='btn btn-primary mb16']");
+									if (demo_url.length>1)
+										demoUrl = demo_url[1].href
+									if (!demoUrl)
+										demoUrl = "http://odoodemo.webkul.com/waiting?step=2&version=latest&module="+module_title;
+								}
 								else
 									demoUrl		= "http://odoodemo.webkul.com/?ext=1&version="+odoo_version[5]+"&module="+module_name;
 								result 		= [demoUrl, "ODOO "+odoo_version[5], module_title];
