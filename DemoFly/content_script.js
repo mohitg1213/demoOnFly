@@ -21,7 +21,8 @@ try {
 								result = ["Demo is available for FREE modules only !!!"];
 							else{
 								module_name = baseURI.split('/')[6];
-								module_title = document.querySelectorAll("h1[class='mt0 mb0']")[0].innerText;
+								// module_title = document.querySelectorAll("h1[class='mt0 mb0']")[0].innerText;
+								module_title = document.title.split("|")[0];
 								if (author.startsWith("Webkul"))
 									demoUrl		= "http://odoodemo.webkul.com/?version="+odoo_version[5]+"&module="+module_name;
 								else
@@ -38,7 +39,8 @@ try {
 		else if ((baseURI.startsWith("https://www.webkul.com")) || (baseURI.startsWith("https://store.webkul.com"))){
 			try
 			{
-				module_title = document.getElementsByClassName('product-name')[0].innerText;
+				// module_title = document.getElementsByClassName('product-name')[0].innerText;
+				module_title = document.title.split("|")[0];
 				demoUrl = document.getElementsByClassName('wk-demo-button')[0].children[0].getAttribute("href");
 				category = document.getElementsByClassName('grid-full breadcrumbs')[0].innerText.split('/')[1];
 				result = [demoUrl, category, module_title];
