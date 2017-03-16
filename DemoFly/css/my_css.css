@@ -13,9 +13,9 @@ body {
 .wk_demomenu a {
   cursor: pointer;
   display: inline-block;
-  width: 185px;
+  padding: 15px 0px 15px;
+  width: 186px;
   height: 100%;
-  padding: 20px 0px 30px;
   font-size: 12px;
   text-align: center;
   position: relative;
@@ -24,7 +24,9 @@ body {
   text-decoration: none;
   color: purple;
 }
-
+#capture-menu a{
+  padding: 0px 0px 15px !important;
+}
 
 .wk_demomenu a:hover {
   background: plum;
@@ -100,7 +102,22 @@ body {
 
 #custom_message {
   margin-left: 7px;
-  margin-right: 7px
+  margin-right: 7px;
+  cursor: not-allowed;
+}
+
+#btn_copy {
+  margin-right: -148px;
+  height: 21px;
+  /*cursor:alias;*/
+  cursor:context-menu;
+/*    background: url(icon-help.png);
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  position: absolute;
+  top: 2px;
+  left: 8px;*/
 }
 
 
