@@ -48,7 +48,7 @@ try {
 				module_title = document.title.split("|")[0];
 				module_title = module_title.split("-")[0];
 				demoUrl = document.getElementsByClassName('wk-demo-button')[0].children[0].getAttribute("href");
-				if (demoUrl="#"){
+				if (demoUrl=="#"){
 					demoUrl = "http://odoodemo.webkul.com/waiting?step=2&version=latest&module="+module_title;
 				}
 				category = document.getElementsByClassName('grid-full breadcrumbs')[0].innerText.split('/')[1];
