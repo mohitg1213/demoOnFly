@@ -35,7 +35,6 @@ body {
   position: absolute;
   width: 30px;
   height: 30px;
-  background: url(ico.png) no-repeat -1px -3px;
   overflow: hidden;
   top: 35px;
   left: 50%;
@@ -111,13 +110,6 @@ body {
   height: 21px;
   /*cursor:alias;*/
   cursor:context-menu;
-/*    background: url(icon-help.png);
-  width: 16px;
-  height: 16px;
-  display: inline-block;
-  position: absolute;
-  top: 2px;
-  left: 8px;*/
 }
 
 
