@@ -13,7 +13,7 @@ try {
 					odoo_version = baseURI.split('/');
 					if ((odoo_version.length > 5)  && (all_odoo_versions.contains(odoo_version[5])))
 					{
-						if (["10.0","9.0"].contains(odoo_version[5]))
+						if (["10.0"].contains(odoo_version[5]))
 						{
 							author = document.querySelectorAll("span[itemprop='author']")[0].innerText
 							downloadurl = document.querySelectorAll("a[itemprop='downloadUrl']")
@@ -36,7 +36,7 @@ try {
 							}
 						}
 						else
-							result = ["Currently, Demo is available only for version 9.0 & 10.0"];
+							result = ["Currently, Demo is available only for version 10.0"];
 					}	
 					else
 						result = ["You need to go on product page in order to check demo."];
