@@ -1,4 +1,7 @@
 # DemoFly
+
+BLOG: https://webkul.com/blog/webkul-demofly-demo-for-odoo-apps
+
 A chrome extension to build and check demo on fly for eCommerce/ERP modules/addons, developed by Webkullians. 
 Webkul Store Link: https://store.webkul.com
 
