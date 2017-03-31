@@ -1,0 +1,116 @@
+body {
+  background: lightgrey;
+}
+
+.wk_demomenu {
+  background: mintcream;
+  text-align: center;
+  margin: 6px 6px 0;
+  border-radius: 8px;
+  border: solid 1px #bbb;
+} 
+
+.wk_demomenu a {
+  cursor: pointer;
+  display: inline-block;
+  padding: 15px 0px 15px;
+  width: 186px;
+  height: 100%;
+  font-size: 12px;
+  text-align: center;
+  position: relative;
+  text-shadow: 0 1px 0px #fff;
+  vertical-align: middle;
+  text-decoration: none;
+  color: purple;
+}
+#capture-menu a{
+  padding: 0px 0px 15px !important;
+}
+
+.wk_demomenu a:hover {
+  background: plum;
+}
+.wk_demomenu a i {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+  top: 35px;
+  left: 50%;
+  margin-left: -15px;
+
+}
+
+.popup-sub {
+  padding: 10px 0 0;
+}
+
+.popup-sub-auth,
+.popup-sub-nonauth {
+    display: none;
+}
+.settings, .history, .app, .site {
+  text-decoration: none;
+  outline: none;
+  display: inline-block;
+  position: relative;
+  padding: 0 0 0 26px;
+  line-height: 20px;
+  height: 24px;
+  font-size: 11px;
+  color: #555;
+  text-shadow: 0 1px 1px #fff;
+  margin: 0 7px;
+}
+.settings:hover, .history:hover, .app:hover, .site:hover {
+  text-decoration: underline;
+} 
+
+.settings i , .history  i,  .app i{
+  background: url(icon-help.png);
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  position: absolute;
+  top: 2px;
+  left: 8px;
+} 
+
+.settings i {
+  background-position: -32px 0px
+}
+
+.app i {
+  background-position: -60px -1px
+}
+
+.site {
+    float: right;
+    padding: 0;
+}
+
+#wk_main {
+  min-width: 200px;
+}
+
+#wk_footer {
+  text-align: center;
+  padding: 3px 3px 6px;
+}
+
+#custom_message {
+  margin-left: 7px;
+  margin-right: 7px;
+  cursor: not-allowed;
+}
+
+#btn_copy {
+  margin-right: -148px;
+  height: 21px;
+  /*cursor:alias;*/
+  cursor:context-menu;
+}
+
+
+
