@@ -1,7 +1,7 @@
 var baseURI = 	window.location.href;
 var result	=	false;
 var downloadurl, odoo_version, module_title, demoUrl, downloadurl, category, author;
-var all_odoo_versions = ["10.0","9.0","8.0","7.0","6.0","6.1","5.0","online","master" ]
+var all_odoo_versions = ["11.0","10.0","9.0","8.0","7.0","6.0","6.1","5.0","online","master" ]
 Array.prototype.contains = function ( needle ) {
    for (i in this) {
       if (this[i] == needle) return true;
@@ -9,11 +9,12 @@ Array.prototype.contains = function ( needle ) {
    return false;
 }
 try {
-		if ((baseURI.startsWith("https://www.odoo.com")) || (baseURI.startsWith("https://apps.odoo.com"))){
+		if ((baseURI.startsWith("https://www.odoo.com")) || (baseURI.startsWith("http://www.odoo.com"))
+		 || (baseURI.startsWith("https://apps.odoo.com")) || (baseURI.startsWith("https://apps.odoo.com"))){
 					odoo_version = baseURI.split('/');
 					if ((odoo_version.length > 5)  && (all_odoo_versions.contains(odoo_version[5])))
 					{
-						if (["10.0"].contains(odoo_version[5]))
+						if (["11.0","10.0","9.0"].contains(odoo_version[5]))
 						{
 							author = document.querySelectorAll("span[itemprop='author']")[0].innerText
 							downloadurl = document.querySelectorAll("a[itemprop='downloadUrl']")
@@ -25,8 +26,17 @@ try {
 								module_title = document.title.split("|")[0];
 								if (author.startsWith("Webkul")){
 									demo_url = document.querySelectorAll("a[class='btn btn-primary mb16']");
-									if (demo_url.length>1)
-										demoUrl = demo_url[1].href
+									if (demo_url.length>=1)
+										demoUrl = demo_url[0].href;
+									if(!demoUrl || (demoUrl && demoUrl.indexOf('odoodemo.webkul.com')<0)){
+										demo_url = document.querySelectorAll("form a")
+										for(var i=0; i<demo_url.length; i++){
+											if(demo_url[i].href && demo_url[i].href.indexOf('odoodemo.webkul.com') >=0){
+												demoUrl = demo_url[i].href;
+												break;
+											}
+										}
+									}
 									if (!demoUrl)
 										demoUrl = "http://odoodemo.webkul.com/waiting?step=2&version=latest&module="+module_title;
 								}
@@ -36,7 +46,7 @@ try {
 							}
 						}
 						else
-							result = ["Currently, Demo is available only for version 10.0"];
+							result = ["Currently, Demo is available only for version 9.0, 10.0 and 11.0"];
 					}	
 					else
 						result = ["You need to go on product page in order to check demo."];
